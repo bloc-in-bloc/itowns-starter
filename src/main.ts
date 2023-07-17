@@ -1,5 +1,5 @@
 import './style.css'
-import * as itowns from 'itowns';
+import * as itowns from '@bloc-in-bloc/itowns';
 import { Vector3, WebGLRenderer, PMREMGenerator, Scene, PerspectiveCamera, Vector2 } from 'three';
 
 const viewerDiv = document.getElementById('map');
@@ -31,19 +31,34 @@ function createRenderer() {
     return renderer;
 }
 
-const potreeLayer = new itowns.PotreeLayer('Lion', {
-    source: new itowns.PotreeSource({
-        file: 'eglise_saint_blaise_arles.js',
-        url: 'https://raw.githubusercontent.com/iTowns/iTowns2-sample-data/master/pointclouds/eglise_saint_blaise_arles',
-        crs: '',
-    }),
-});
+let potreeLayer = undefined;
+const usePotree2 = true;
+
+if (usePotree2) {
+    potreeLayer = new itowns.Potree2Layer('Lion', {
+        source: new itowns.Potree2Source({
+            file: 'metadata.json',
+            url: '/data/lion-potree2.0',
+            crs: '',
+        }),
+    });
+} else {
+    potreeLayer = new itowns.PotreeLayer('Lion', {
+        source: new itowns.PotreeSource({
+            file: 'cloud.js',
+            url: '/data/lion',
+            crs: '',
+        }),
+    });
+}
+
 
 var customRenderer = createRenderer();
 var rendererSize = customRenderer.getSize(new Vector2());
 var customCamera = new PerspectiveCamera(60, rendererSize.width / rendererSize.height, 1, 10000);
 scene.add(customCamera);
-const view = new itowns.View('EPSG:3946', viewerDiv, { camera: { cameraThree: customCamera }, renderer: customRenderer });
+const view = new itowns.View('EPSG:3946', viewerDiv, { camera: { cameraThree: customCamera } });
+customRenderer.domElement.remove();
 view.mainLoop.gfxEngine.renderer.setClearColor(0xcccccc);
 
 view.addLayer(potreeLayer).then(() => {

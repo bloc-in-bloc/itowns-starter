@@ -8,6 +8,6 @@ export default defineConfig({
     },
   },
   define: {
-    'window.global': {},
+    'window.global': {}
   },
 })
