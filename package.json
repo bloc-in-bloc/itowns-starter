@@ -15,7 +15,7 @@
         "vite": "^4.4.3"
     },
     "dependencies": {
-        "@bloc-in-bloc/itowns": "^2.40.1-next.0",
+        "@bloc-in-bloc/itowns": "^2.40.3-next.0",
         "buffer": "^6.0.3",
         "itowns": "^2.39.1-next.30",
         "three": "^0.153.0"

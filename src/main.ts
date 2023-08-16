@@ -57,7 +57,7 @@ var customRenderer = createRenderer();
 var rendererSize = customRenderer.getSize(new Vector2());
 var customCamera = new PerspectiveCamera(60, rendererSize.width / rendererSize.height, 1, 10000);
 scene.add(customCamera);
-const view = new itowns.View('EPSG:3946', viewerDiv, { camera: { cameraThree: customCamera } });
+const view = new itowns.View('EPSG:3946', viewerDiv, { camera: { cameraThree: customCamera }, renderer: customRenderer });
 customRenderer.domElement.remove();
 view.mainLoop.gfxEngine.renderer.setClearColor(0xcccccc);
 
