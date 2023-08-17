@@ -10,4 +10,7 @@ export default defineConfig({
   define: {
     'window.global': {},
   },
+  optimizeDeps: {
+    exclude: ["three"]
+  }
 })
