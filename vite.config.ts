@@ -15,7 +15,7 @@ export default defineConfig({
     copy({
       targets: [{
         src: "node_modules/@bloc-in-bloc/itowns/dist/*",
-        dest: "node_modules/.vite/workers"
+        dest: "node_modules/.vite/Worker"
       }],
       verbose: true
     }),
