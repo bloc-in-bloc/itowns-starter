@@ -38,7 +38,7 @@ if (usePotree2) {
     potreeLayer = new itowns.Potree2Layer('Lion', {
         source: new itowns.Potree2Source({
             file: 'metadata.json',
-            url: '/data/lion-potree2.0',
+            url: '/itowns-starter/data/lion-potree2.0',
             crs: '',
         }),
     });
@@ -46,7 +46,7 @@ if (usePotree2) {
     potreeLayer = new itowns.PotreeLayer('Lion', {
         source: new itowns.PotreeSource({
             file: 'cloud.js',
-            url: '/data/lion',
+            url: '/itowns-starter/data/lion',
             crs: '',
         }),
     });

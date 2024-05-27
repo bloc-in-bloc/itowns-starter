@@ -12,13 +12,13 @@
     "license": "ISC",
     "devDependencies": {
         "typescript": "^5.0.4",
-        "vite": "^4.4.3"
+        "vite": "^5.2.11"
     },
     "dependencies": {
-        "@bloc-in-bloc/itowns": "^2.40.4-next.11",
+        "@bloc-in-bloc/itowns": "^2.44.0-next.3",
         "buffer": "^6.0.3",
         "itowns": "^2.39.1-next.30",
         "rollup-plugin-copy": "^3.5.0",
-        "three": "^0.154.0"
+        "three": "^0.159.0"
     }
 }
