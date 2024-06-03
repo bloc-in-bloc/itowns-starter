@@ -15,7 +15,7 @@
         "vite": "^5.2.11"
     },
     "dependencies": {
-        "@bloc-in-bloc/itowns": "^2.45.1-next.2",
+        "@bloc-in-bloc/itowns": "^2.46.0-next.2",
         "buffer": "^6.0.3",
         "itowns": "^2.39.1-next.30",
         "rollup-plugin-copy": "^3.5.0",
