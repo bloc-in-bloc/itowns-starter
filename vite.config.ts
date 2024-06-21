@@ -14,7 +14,7 @@ export default defineConfig({
   plugins: [
     copy({
       targets: [{
-        src: "node_modules/@bloc-in-bloc/itowns/dist/*",
+        src: "node_modules/itowns-potree2/dist/*",
         dest: "node_modules/.vite/Worker"
       }],
       verbose: true
