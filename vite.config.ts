@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import copy from "rollup-plugin-copy";
 
 export default defineConfig({
   base: '/itowns-starter/',
@@ -9,5 +10,14 @@ export default defineConfig({
   },
   define: {
     'window.global': {}
-  }
+  },
+  plugins: [
+    copy({
+      targets: [{
+        src: "node_modules/@bloc-in-bloc/itowns/dist/*",
+        dest: "node_modules/.vite/Worker"
+      }],
+      verbose: true
+    }),
+  ]
 })

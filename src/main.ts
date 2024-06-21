@@ -1,5 +1,5 @@
 import './style.css'
-import * as itowns from '@bloc-in-bloc/itowns';
+import * as itowns from 'itowns';
 import { Vector3, WebGLRenderer, PMREMGenerator, Scene, PerspectiveCamera, Vector2 } from 'three';
 
 const viewerDiv = document.getElementById('map');
