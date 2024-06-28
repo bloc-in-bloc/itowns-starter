@@ -14,8 +14,9 @@ export default defineConfig({
   plugins: [
     copy({
       targets: [{
-        src: "node_modules/itowns-potree2/dist/*",
-        dest: "node_modules/.vite/Worker"
+        src: "node_modules/itowns-potree2/dist/itowns_potree2worker.js",
+        dest: "node_modules/.vite/Worker/",
+        rename: "Potree2Worker.js"
       }],
       verbose: true
     }),
